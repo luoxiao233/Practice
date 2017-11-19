@@ -1,0 +1,5 @@
+package com.zuikc.object;
+
+public interface Inter {
+	public void print();
+}

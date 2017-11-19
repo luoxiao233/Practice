@@ -1,0 +1,10 @@
+package com.java.innerclass;
+
+public class Test1_innerclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

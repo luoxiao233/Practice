@@ -1,0 +1,18 @@
+package com.zuikc.Exception;
+
+public class Demo1_Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo D = new Demo();
+		D.test(10,2);
+
+	}
+
+}
+class Demo(){
+	public int test(int a,int b){
+		return a / b;
+		
+	}
+}

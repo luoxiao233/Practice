@@ -1,0 +1,64 @@
+package com.zuikc.exception;
+
+public class Demo3_Exception {
+	/**
+	 * * A:异常处理的两种方式
+			* a:try…catch…finally
+				* try catch
+				* try catch finally
+				* try finally 
+			* b:throws
+		* B:try...catch处理异常的基本格式
+			* try…catch…finally
+		* C:案例演示
+			* try...catch的方式处理1个异常
+			 *
+			 * 
+		try: 用类发现异常的
+		catch: 用来捕获异常的
+		finally:用来释放资源的
+		
+		JDK1.7版本新特性:各个异常间可以用| 来连接
+		
+		try...catch后面接多个异常的话,小的放在前面,大的放在后面,
+		因为根据多态的原理,如果大的放在前面,会将后面小的全部接收.
+		
+		世界上最真情的相依是,你在try,我在catch,无论你怎么样,我都静静的接受,默默的处理
+		高尚的备胎精神
+	 */
+	public static void main(String[] args) {		
+		Demo2 d = new Demo2();
+		
+		try {	
+			int x = d.div(10, 0);
+			System.out.println(x);
+			
+			int[] arr = {11,22,44,33};
+			System.out.println(arr[10]);		//ArrayIndexOutOfBoundsException
+			
+			arr = null;
+			System.out.println(arr[0]);
+		//}catch (ArithmeticException | ArrayIndexOutOfBoundsException e) {//jdk1.7新特性
+		}catch (ArithmeticException e) {
+			System.out.println("出错了");
+		}catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("索引越界了");
+		}catch (Exception e) {		//Exception e = new NullPointerException();
+			System.out.println("报错");
+		}
+		
+		System.out.println("111111111111111111111");
+	}
+
+}
+
+class Demo2 {
+	/*
+	 * 除法
+	 */
+	public int div(int a,int b) {  	//10 ,0 
+		return a / b;				// new ArithmeticException("/ by zero");
+									//除数为0,不符合算术运算规则,直接抛出异常对象ArithmeticException
+	}
+	
+}

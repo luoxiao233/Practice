@@ -1,0 +1,25 @@
+package com.java.innerclass;
+
+public class Demo4_innerclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer.Inner1 oi = new Outer.Inner1();
+		oi.print1();
+
+		Outer.Inner2.print2();
+	}
+
+}
+class Outer {
+	static class Inner1 {
+		public void print1() {
+			System.out.println("print1");
+		}
+	}
+	static class Inner2 {
+		public static void print2() {
+			System.out.println("print2");
+		}
+	}
+}

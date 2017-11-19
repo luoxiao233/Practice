@@ -1,0 +1,58 @@
+package com.zuikc.test;
+
+public class Test1_Exception {
+	/*
+	 * ###19.10_异常(finally关键字的面试题)
+		* A:面试题1
+			* final,finally和finalize的区别
+			* 
+			* final 最终的意思
+			* 修饰类,不能被继承
+			* 修饰方法,不能被重写
+			* 修饰变量,变常量,只能赋值一次
+			* 
+			* finally 是try...catch语句的一部分,被finally控制的语句体一定会执行
+			* 
+			* finalize() 是一个方法,当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。
+		* B:面试题2
+			* 如果catch里面有return语句，请问finally的代码还会执行吗?如果会，请问是在return前还是return后。
+	 */
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		int x = d.method();
+		System.out.println(x);
+	}
+}
+class Demo {
+	public int method() {
+		int x = 10;
+		try {
+			x = 20;
+			System.out.println(1 / 0);  //异常对象
+			return x;
+		} catch (Exception e) {
+			x = 30;
+			return x;	//return 建立了一个返回路径 ,把x = 30放在返回路径上,
+						//但是看一下finally执行后,才会再带上x = 30 返回;在finally里面执行的语句和返回值无关;
+		}finally {
+			x = 40;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+package com.zuikc.exception;
+
+import java.io.FileInputStream;
+/*
+ * try...catch 客户端  qq 
+ * 			 EE 服务端  throws  从底层一层一层向抛.错误日志.
+ */
+public class Demo4_Exception {
+
+	public static void main(String[] args) {
+		try {			
+			FileInputStream fis = new FileInputStream("xxx.txt");
+		}catch (Exception e) {
+			
+		}
+		
+		System.out.println("111111111");
+	}
+
+}

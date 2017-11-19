@@ -1,0 +1,23 @@
+package com.zuikc.exception;
+
+public class Demo5_Exception {
+	/*
+	 * * A:Throwable的几个常见方法
+		* a:getMessage()
+			* 获取异常信息，返回字符串。
+		* b:toString()
+			* 获取异常类名和异常信息，返回字符串。
+		* c:printStackTrace() 
+			* 获取异常类名和异常信息，以及异常出现在程序中的位置。返回值void。
+	 */
+	public static void main(String[] args) {
+		try {
+			System.out.println(1 / 0);		// new ArithmeticException();
+		} catch (Exception e) {				//Exception e = new ArithmeticException();
+			System.out.println(e.getMessage());
+			System.out.println(e.toString());
+			e.printStackTrace();
+		}
+	}
+
+}

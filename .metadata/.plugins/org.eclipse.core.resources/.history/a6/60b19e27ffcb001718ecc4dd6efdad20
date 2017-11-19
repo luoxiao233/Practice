@@ -1,0 +1,19 @@
+package com.java.innerclass;
+
+public class Demo1_innerclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer.Inter OI = new Outer().new Inter();
+		OI.print();
+	}
+
+}
+class Outer {
+	private int num = 10;
+	class Inter {
+		public  void print(){
+			System.out.println(num);
+		}
+	}
+}

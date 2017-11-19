@@ -1,0 +1,22 @@
+package com.zuikc.exception;
+
+public class Demo2_Exception {
+
+	public static void main(String[] args) {
+		Demo d = new Demo();
+		int x = d.div(10, 0);			//ArithmeticException
+		System.out.println(x);
+	}
+
+}
+
+class Demo {
+	/*
+	 * 除法
+	 */
+	public int div(int a,int b) {  	//10 ,0 
+		return a / b;				// new ArithmeticException("/ by zero");
+									//除数为0,不符合算术运算规则,直接抛出异常对象ArithmeticException
+	}
+	
+}

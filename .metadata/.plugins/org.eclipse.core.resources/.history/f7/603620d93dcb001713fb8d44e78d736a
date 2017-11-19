@@ -1,0 +1,11 @@
+package com.zuikc.no14;
+
+public class Student extends Person {
+
+	@Override
+	public void eat() {
+		System.out.println("³Ô·¹");// TODO Auto-generated method stub
+
+	}
+
+}

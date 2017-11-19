@@ -1,0 +1,25 @@
+package com.java.innerclass;
+
+public class Demo5_innerclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Outer5 O = new Outer5();
+		O.method();
+
+	}
+
+}
+class Outer5{
+	public void method(){
+		 int num = 10;     
+		class Inter5{
+			public void print(){
+				System.out.println(num);
+			}
+		}
+		Inter5 I = new Inter5();
+		I.print();
+	}
+}

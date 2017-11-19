@@ -1,0 +1,23 @@
+package com.java.innerclass;
+
+public class Test1_innerclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Outer3.Inner3 oi = new Outer3().new Inner3();
+		oi.show();
+	}
+
+}
+class Outer3 {
+	public int num = 10;
+	class Inner3{
+		public int num = 20;
+		public void show(){
+			int num = 30;
+			System.out.println(num);        //num = 10
+			System.out.println(this.num);    //num = 20
+			System.out.println(Outer.this.num);   //num = 30
+		}
+	}
+}

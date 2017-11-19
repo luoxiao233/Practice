@@ -1,0 +1,45 @@
+package com.zuikc.Exception;
+
+public class Demo3_Exception {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person a = new Person();
+		a.setAge(23);
+		a.print(23);
+
+	}
+
+}
+class Person{
+	private String name;
+	private int age;
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void print(int age) throws Exception{
+		if (age < 0 && age >200) {
+			System.out.println(age);
+		}else {
+			throw new Exception("∑«∑®ƒÍ¡‰");
+		}
+	}
+}

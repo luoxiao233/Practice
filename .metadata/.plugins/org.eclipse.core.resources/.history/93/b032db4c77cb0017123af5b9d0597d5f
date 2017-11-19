@@ -1,0 +1,10 @@
+package com.zuikc.object;
+
+public class Demo implements Inter {
+
+	@Override
+	public void print() {
+		System.out.println("print");
+	}
+
+}

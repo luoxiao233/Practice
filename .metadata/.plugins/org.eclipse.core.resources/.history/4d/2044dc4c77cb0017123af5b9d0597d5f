@@ -1,0 +1,60 @@
+package com.zuikc.test;
+
+public class Test1_Javase {
+	/*
+	 * (Eclipse中断点调试的基本使用)(了解)
+* A:Debug的作用
+	* 调试程序
+	* 查看程序执行流程
+* B:如何查看程序执行流程		
+	* 什么是断点：
+		* 就是一个标记，从哪里开始。		
+	* 如何设置断点：
+		* 你想看哪里的程序，你就在那个有效程序的左边双击即可。	
+	* 在哪里设置断点：
+		* 哪里不会点哪里。
+		* 目前：我们就在每个方法的第一条有效语句上都加。		
+	* 如何运行设置断点后的程序：		* 右键 -- Debug as -- Java Application		
+	* 看哪些地方：
+		* Debug：断点测试的地方
+			* 在这个地方，记住F6，或者点击也可以。一次看一行的执行过程。
+		* Variables：查看程序的变量变化
+		* ForDemo：被查看的源文件
+		* Console：控制台		
+	* 如何去断点：
+		* a:再次双击即可
+		* b:找到Debug视图，Variables界面，找到Breakpoints，并点击，然后看到所有的断点，最后点击那个双叉。
+	 */
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+		System.out.println("a:"+a+",b:"+b);
+		/*change(a,b);
+		System.out.println("a:"+a+",b:"+b);*/
+		
+		
+
+		int[] arr = {1,2,3,4,5};
+		change(arr);
+		System.out.println(arr[1]);
+	}
+	
+	public static void change(int a,int b) {
+		System.out.println("a:"+a+",b:"+b);
+		a = b;
+		b = a + b;
+		System.out.println("a:"+a+",b:"+b);
+	}
+
+	public static void change(int[] arr) {
+		for(int x=0; x<arr.length; x++) {
+			if(arr[x]%2==0) {
+				arr[x]*=2;
+			}
+		}
+	}
+
+
+}
+
+

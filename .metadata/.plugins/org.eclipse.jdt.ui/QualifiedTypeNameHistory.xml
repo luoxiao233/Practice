@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="animal.Animal"/>
+<fullyQualifiedTypeName name="com.zuikc.student.Student"/>
+<fullyQualifiedTypeName name="com.zuikc.innerclass.Demo3_InnerClass"/>
+<fullyQualifiedTypeName name="work.Outer"/>
+<fullyQualifiedTypeName name="work.Outer.Inter"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
+<fullyQualifiedTypeName name="work.O.I"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.java.innerclass.Outer"/>
+<fullyQualifiedTypeName name="com.java.innerclass.Outer.Inter"/>
+</qualifiedTypeNameHistroy>

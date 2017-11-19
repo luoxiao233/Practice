@@ -1,0 +1,23 @@
+package com.zuikc.exception;
+
+public class Demo8_Exception {
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class AgeOutBoundsException extends Exception {		//自定义异常类
+
+	public AgeOutBoundsException() {				//使用 alt + shift + s  + c : 创建无参和有参构造(选第一个和第四个)
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public AgeOutBoundsException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+}
