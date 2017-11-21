@@ -1,0 +1,11 @@
+package com.java.string;
+
+public class Demo2_Constructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = new String();
+		System.out.println(s1);     //Ä¬ÈÏÎª¿Õ×Ö·û´®µÄ
+	}
+
+}

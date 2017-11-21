@@ -1,0 +1,22 @@
+package com.java.string;
+
+public class Demo2_Constructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//demo1();
+		byte[] arr = {97,98,99};
+		String s1 = new String(arr);
+		System.out.println(arr);
+		System.out.println(s1);
+	}
+
+	static void demo1() {
+		String s1 = new String();
+		System.out.println(s1);     //默认为空字符串的
+		
+		String s2 = "";
+		System.out.println(s2);   //同样为空字符串
+	}
+
+}

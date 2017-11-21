@@ -1,0 +1,16 @@
+package com.java.object;
+
+import com.java.bean.student;
+
+public class Demo1_Object {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Object o = new Object();
+		System.out.println(o.hashCode());
+		
+		student s =  new student();
+		System.out.println(s.hashCode());
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.java.object;
+
+public class Demo2_getName {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Object o1 = new Object();
+		Class c = o1.getClass();
+		System.out.println(c.getName());
+	}
+
+}

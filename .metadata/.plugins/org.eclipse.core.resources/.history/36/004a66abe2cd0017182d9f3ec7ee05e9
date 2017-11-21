@@ -1,0 +1,13 @@
+package com.java.object;
+
+import com.java.bean.student;
+
+public class Demo3_toString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		student stu = new student();
+		System.out.println(stu.toString());
+	}
+
+}

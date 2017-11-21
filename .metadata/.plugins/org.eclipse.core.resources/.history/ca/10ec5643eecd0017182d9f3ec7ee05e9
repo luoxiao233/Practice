@@ -1,0 +1,63 @@
+package com.zuikc.string;
+
+public class Demo2_Constructor {
+	/*
+	 * * A:常见的构造方法
+			* public String():空参构造
+			* public String(byte[] bytes):把字节数组转成字符串
+			* public String(byte[] bytes,int index,int length):把字节数组的一部分转成字符串
+			* public String(char[] value):把字符数组转成字符串
+			* public String(char[] value,int index,int count):把字符数组的一部分转成字符串
+			* public String(String original):把字符串常量值转成字符串
+		* B:案例演示	
+			* 演示String类的常见的构造方法
+			* 
+			* null 和  ""的区别:
+			* 
+			* ""是一个字符串常量,同时也是字符串的一个对象,所以他能调用String类里面的所有方法
+			* null是一个空常量,它不能调用方法;但是它可以给所有的引用数据类型赋值.
+	 */
+	public static void main(String[] args) {
+		//demo1();
+		//demo2();
+		//demo3();	
+		//demo4();		
+		String s = "abc";
+		String s2 = new String(s);
+		System.out.println(s2);		
+	}
+
+	static void demo4() {
+		char[] arr = {'a','b','c','d','e'};
+		String s = new String(arr);
+		System.out.println(s);
+		
+		String s2 = new String(arr, 1, 3);
+		System.out.println(s2);
+	}
+
+	static void demo3() {
+		byte[] arr = {97,98,99,100,101,102};
+		String s1 = new String(arr, 0, 4);
+		
+		System.out.println(s1);
+	}
+
+	static void demo2() {
+		byte[] arr = {97,98,99};
+		String s1 = new String(arr);
+		System.out.println(arr);
+		System.out.println(s1);			//解码:把计算机看的懂的转换成人的看的懂的  GBK
+	}
+
+	static void demo1() {
+		String s1 = new String();
+		//System.out.println(s1);		//  ""
+		
+		String s2 = "";
+		//s2 = null;
+		
+		System.out.println(s2.toString());
+	}
+
+}

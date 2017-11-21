@@ -1,0 +1,14 @@
+package com.java.object;
+
+import com.java.student.student;
+
+public class Demo4_Equals {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		student s1 = new student("张三",23);
+		student s2 = new sutdent("张三",23);
+		System.out.println(s1.equals(s2));
+	}
+
+}

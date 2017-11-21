@@ -1,0 +1,21 @@
+package com.java.method;
+
+public class Demo2_method {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "01234567890";
+		System.out.println(s.length());
+		System.out.println(s.charAt(5));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+
+}

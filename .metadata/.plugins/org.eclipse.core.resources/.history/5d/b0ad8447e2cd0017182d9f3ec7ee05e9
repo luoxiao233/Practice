@@ -1,0 +1,22 @@
+package com.java.method;
+
+public class Demo2_method {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "01234567890";
+		String s1 = "零一二三四五六七八九";
+		System.out.println(s.length());
+		System.out.println(s1.charAt(5));
+		System.out.println(s1.indexOf("二"));
+		System.out.println(s.lastIndexOf("12"));
+		System.out.println(s.lastIndexOf('5', 3));
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+	}
+
+}

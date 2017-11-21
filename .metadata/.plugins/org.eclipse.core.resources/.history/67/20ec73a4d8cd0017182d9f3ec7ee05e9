@@ -1,0 +1,64 @@
+package com.zuikc.method;
+
+public class Demo2_Method {
+	/*
+	 * * A:String类的获取功能
+			* int length():获取字符串的长度
+			* char charAt(int index):获取指定索引位置的字符
+			* int indexOf(int ch):返回指定字符在此字符串中第一次出现处的索引		//自动类型提升
+			* int indexOf(String str):返回指定字符串在此字符串中第一次出现处的索引
+			* int indexOf(int ch,int fromIndex):返回指定字符在此字符串中从指定位置后第一次出现处的索引
+			* int indexOf(String srt,int fromIndex):返回指定字符串在此字符串中从指定位置后第一次出现处的索引
+			* lastIndexOf(int ch)  返回指定字符在此字符串中最后一次出现处的索引。
+			* String substring(int start):从指定位置开始截取字符串,默认到结尾
+			* String substring(int start,int end):从指定位置开始到指定位置结束截取字符串(包头不包尾)
+	 */
+	public static void main(String[] args) {
+		//demo1();
+		//demo2();
+		//demo3();
+		//demo4();
+		String s = "woxiangjingjing";
+		String s2 = s.substring(7);
+		System.out.println(s2);
+		
+		System.out.println(s.substring(7, 11));	//包头不包尾		
+	}
+
+	static void demo4() {
+		String s = "woxiangjingjing";
+		String s2 = "jing";
+		String s3 = "an";
+		System.out.println(s.indexOf(s2));
+		System.out.println(s.indexOf(s3));
+		
+		System.out.println(s.indexOf('i', 5));
+		System.out.println(s.indexOf(s3, 1));
+		
+		System.out.println(s.lastIndexOf('i'));
+	}
+
+	static void demo3() {
+		String s = "woxiangjingjing";
+		String s2 = "你要减肥,造吗?";
+		System.out.println(s.indexOf('i'));
+		int index = s2.indexOf('肥');
+		System.out.println(index);
+	}
+
+	static void demo2() {
+		String s = "woxiangjingjing";
+		String s2 = "你要减肥,造吗?";
+		char ch = s.charAt(3);
+		System.out.println(ch);
+		System.out.println(s2.charAt(5));
+	}
+
+	static void demo1() {
+		String s = "woxiangjingjing";
+		System.out.println(s.length());
+		String s2 = "你要减肥,造吗?";
+		System.out.println(s2.length());
+	}
+
+}

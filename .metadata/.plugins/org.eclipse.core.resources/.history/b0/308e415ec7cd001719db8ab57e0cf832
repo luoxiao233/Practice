@@ -1,0 +1,17 @@
+package com.java.string;
+
+public class Demo2_String {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo1();
+	}
+
+	static void Demo1() {
+		String s1 = "abc";
+		String s2 = "abc";
+		System.out.println(s1 == s2);
+		System.out.println(s1.equals(s2));
+	}
+
+}
