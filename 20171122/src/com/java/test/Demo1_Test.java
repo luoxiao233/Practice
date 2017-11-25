@@ -19,14 +19,12 @@ public class Demo1_Test {
 		sb.append("[");
 		for (int i = 0; i < arr.length; i++) {
 			if (i == arr.length - 1) {
-				sb.append(arr[i]);
-				sb.append("]");
+				sb.append(arr[i]).append("]");
 			}else{
-				sb.append(arr[i]);
-				sb.append(",");
+				sb.append(arr[i]).append(",");
 			}
 		}
-		System.out.println(sb);
+		System.out.println(sb.toString());  //StringBuffer×ª»¯ÎªString
 	}
 
 }
