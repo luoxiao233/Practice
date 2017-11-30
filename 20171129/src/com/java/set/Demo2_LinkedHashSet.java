@@ -13,8 +13,8 @@ public class Demo2_LinkedHashSet {
 	public static void main(String[] args){
 		LinkedHashSet<String> lhs = new LinkedHashSet<>();
 		lhs.add("c");
-		lhs.add("b");
 		lhs.add("d");
+		lhs.add("b");
 		lhs.add("d");
 		lhs.add("d");
 		lhs.add("g");
