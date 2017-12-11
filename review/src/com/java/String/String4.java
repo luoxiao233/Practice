@@ -1,4 +1,4 @@
-package com.java.Test;
+package com.java.String;
 
 import java.util.Arrays;
 
@@ -26,8 +26,9 @@ public class String4 {
 		String s2 = String.valueOf(arr);
 		System.out.println(s2);
 		System.out.println(s3);
-		System.out.println(String.valueOf((byte)5));
-		System.out.println(String.valueOf((short)5));
+		//将byte型的5 转化为String的5，String中有静态的valueOf，容易一起看错的是非静态的indexOf() 这个返回的是索引值
+		System.out.println(String.valueOf((byte)5));      
+		System.out.println(String.valueOf((short)5));  
 		System.out.println(String.valueOf((int)5));
 		System.out.println(String.valueOf('5'));
 		System.out.println(String.valueOf((float)11.5));

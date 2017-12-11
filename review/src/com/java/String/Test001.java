@@ -1,7 +1,9 @@
-package com.java.Test;
+package com.java.String;
 
 public class Test001 {
-
+/*
+ * √∞≈›≈≈–Ú∫Õ—°‘Ò≈≈–Ú
+ */
 	public static void main(String[] args) {
 //		demo1();
 		demo2();
