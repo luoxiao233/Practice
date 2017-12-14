@@ -101,7 +101,7 @@ public class Function {
 	/**
 	 * 字符流标准格式,dir1文件必须存在
 	 * @param String dir1,String dir2
-	 * @return 
+	 * @return void
 	 * @throws IOException 
 	 */
 	public static void IO_CharStream(String dir1,String dir2) throws IOException{
@@ -120,6 +120,7 @@ public class Function {
 	/**
 	 * 字节流标准格式,dir1文件必须存在
 	 * @param String dir1,String dir2
+	 * @return void
 	 * @throws IOException 
 	 */
 	public static void IO_ByteStream(String dir1,String dir2) throws IOException{
@@ -136,6 +137,7 @@ public class Function {
 	/**
 	 * 存入TreeSet使用，并且比较器排序(用对象的toString()方法做出比较)
 	 * @param Object object
+	 * @return void
 	 */
 	public static void treeSet(Object object){
 		TreeSet<Object> ts = new TreeSet<>(new Comparator<Object>() {
@@ -166,7 +168,10 @@ public class Function {
 	
 	/**
 	 * 获取出生到现在的天数
+	 * @param String birthday,String today
+	 * @return int
 	 * @throws ParseException 
+	 * 
 	 */
 	public static int getDayNums(String birthday,String today) throws ParseException{
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日");
@@ -178,7 +183,8 @@ public class Function {
 	
 	/**
 	 * 查询字符串中各个字符个数
-	 * 
+	 * @param String line
+	 * @return void
 	 */
 	public static void getCharNums(String line){
 		TreeMap<Character, Integer> tm = new TreeMap<>();
@@ -193,5 +199,47 @@ public class Function {
 			System.out.println(key + "=" + tm.get(key));
 		}
 	}
-
+	
+	/**
+	 * 不死神兔（递归法）
+	 * @param int month
+	 * @return int
+	 */
+	public static int getTotal(int month){
+		if (month == 1 || month == 2) {
+			return 1;
+		}else
+			return getTotal(month - 1) + getTotal(month - 2);
+	}
+	
+	/**
+	 * 阶乘的尾部零的个数（递归法）
+	 * @param int num
+	 * @return int
+	 */
+	public static int getZeroNum(int num){
+		if (num >= 1 && num <= 4) {
+			return 0;
+		}else
+			return (num / 5) + getZeroNum(num / 5);
+	}
+	
+	/**
+	 * 删除文件或者文件夹下所有文件
+	 * @param file dir
+	 * @return void
+	 */
+	public static void delDirectory(File dir){
+		if (dir.isDirectory()) {
+			File[] subFiles = dir.listFiles();
+			for (File subFile : subFiles) {
+				if (subFile.isFile()) {
+					subFile.delete();
+				}else
+					delDirectory(subFile);
+			}
+			dir.delete();
+		}else 
+			dir.delete();
+	}
 }

@@ -1,0 +1,38 @@
+1.JDK7特性
+* A:二进制字面量
+* B:数字字面量可以出现下划线
+* C:switch 语句可以用字符串
+* D:泛型简化,菱形泛型<>
+* E:异常的多个catch合并,每个异常用或|
+* F:try-with-resources 语句(1.7版本标准的异常处理代码)
+
+2.HashMap和Hashtable的区别。
+* HashMap和Hashtable的区别
+* Hashtable是JDK1.0版本出现的,是线程安全的,效率低,
+* HashMap是JDK1.2版本出现的,是线程不安全的,效率高
+* Hashtable不可以存储null键和null值,
+* HashMap可以存储null键和null值(目的是为了让后续代码可以继续执行)
+
+3、请简要描述List和Set的区别。
+Collection
+--List：以特定顺序存储
+--ArrayList、LinkList、Vector
+--Set：不能包含重复的元素
+--HashSet、TreeSet
+
+4、类与类，类与接口，接口与接口的关系。
+    * 类与类
+           * 继承,单继承,多层继承
+    * 类与接口:
+           * 实现,单实现,多实现
+    * 接口与接口
+              * 继承,单继承,多继承
+
+5、final,finally和finalize的区别。
+* final 最终的意思
+                  * 修饰类,不能被继承
+                  * 修饰方法,不能被重写
+                  * 修饰变量,变常量,只能赋值一次
+                  *
+* finally 是try...catch语句的一部分,被finally控制的语句体一定会执行
+* finalize() 是一个方法,当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。
